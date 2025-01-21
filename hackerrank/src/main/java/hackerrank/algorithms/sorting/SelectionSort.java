@@ -1,17 +1,21 @@
 package hackerrank.algorithms.sorting;
 
+import java.util.Arrays;
+
 public class SelectionSort {
     public static void main(String[] args) {
 
         int[] arr = {9, 8, 3, 13, 87, 12, 99};
 
-        int[] myArray = algorithm(arr);
+        System.out.println(Arrays.toString(arr));
 
-        printSorted(myArray);
+        selectionSortAlg(arr);
+
+        System.out.println(Arrays.toString(arr));
     }
 
     // selection sort algorithm
-    public static int[] algorithm(int[] arr) {
+    public static void selectionSortAlg(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             int minimum = i;
 
@@ -21,20 +25,12 @@ public class SelectionSort {
                 }
             }
 
-            int temp = arr[i];
-            arr[i] = arr[minimum];
-            arr[minimum] = temp;
-        }
-        return arr;
-    }
+            if (i != minimum) {
+                int temp = arr[i];
+                arr[i] = arr[minimum];
+                arr[minimum] = temp;
+            }
 
-
-    // print array method
-    private static void printSorted(int[] ints) {
-        System.out.print("Sorted array: ");
-
-        for (int n : ints) {
-            System.out.print(n + " ");
         }
     }
 }
