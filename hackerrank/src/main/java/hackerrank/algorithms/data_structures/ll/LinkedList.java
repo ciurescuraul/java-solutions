@@ -1,21 +1,24 @@
 package hackerrank.algorithms.data_structures.ll;
 
+class Node {
+    int value;
+    Node next;
+
+    public Node(int value) {
+        this.value = value;
+    }
+}
+
 public class LinkedList {
 
     private Node head;
     private Node tail;
     private int length;
 
-    class Node {
-        int value;
-        Node next;
-
-        public Node(int value) {
-            this.value = value;
-        }
+    // constructor
+    public LinkedList() {
     }
 
-    // constructor
     public LinkedList(int value) {
 
         Node newNode = new Node(value);
@@ -28,7 +31,7 @@ public class LinkedList {
         Node temp = head;
 
         while (temp != null) {
-            System.out.println(temp.value);
+            System.out.print(temp.value + " ");
             temp = temp.next;
         }
     }
