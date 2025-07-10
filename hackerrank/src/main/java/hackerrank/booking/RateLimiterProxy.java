@@ -1,4 +1,4 @@
-package hackerrank.algorithms;
+package hackerrank.booking;
 
 import java.util.List;
 
